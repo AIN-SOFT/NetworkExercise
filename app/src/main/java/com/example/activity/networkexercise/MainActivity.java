@@ -58,9 +58,8 @@ public class MainActivity extends AppCompatActivity {
                     if (responseCode==200){
                         InputStream is=conn.getInputStream();
                         String response = getStringFromInputStream(is);
-
                         System.out.println(response);
-                    }                               
+                    }
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -83,31 +82,4 @@ public class MainActivity extends AppCompatActivity {
         os.close();
         return state;
     }
-
-
-
-//    Handler handler = new Handler() {
-//        @Override
-//        public void handleMessage(Message msg) {
-//            super.handleMessage(msg);
-//            Bundle data = msg.getData();
-//            String val = data.getString("value");
-//            Log.i("mylog", "请求结果为-->" + val);
-//            // UI界面的更新等相关操作
-//        }
-//    };
-
-    /**
-     * 网络操作相关的子线程
-     */
-//    Runnable networkTask = new Runnable() {
-//
-//        @Override
-//        public void run() {
-//            goSearch();
-//        }
-//    };
-
-
-
 }
